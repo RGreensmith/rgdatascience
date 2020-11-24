@@ -1,0 +1,44 @@
+{
+    "title": {
+        "content": "Convolutional Neural Network to predict the class of an image",
+        "className": "title--blue"
+    },
+    "content": [
+        {
+            "type": "paragraph",
+            "content": "This article is my current understanding and interpretation of how Convolutional Neural Networks (hereafter CNN) work and the steps I took to create and train a CNN; this is not peer reviewed, therefore it should not be used as reference/learning material, and credible source of information."
+        },
+        {
+            "type": "paragraph",
+            "content": "I created a Convolutional Neural Network (CNN) for binary classification of images."
+        },
+        {
+            "type": "subheading",
+            "content": "Initialising the CNN"
+        },
+        {
+            "type": "paragraph",
+            "content": "The first step was to initialise the CNN, for which I used keras Sequential. I added two convolutional layers and added the pooling step after each of the layers. I then flattened it, made a full connection, and then added the output layer."
+        },
+        {
+            "type": "subheading",
+            "content": "Training the CNN"
+        },
+        {
+            "type": "paragraph",
+            "content": "After initialisation, I trained the CNN. Firstly, I compiled the CNN, then trained it over 25 epochs."
+        },
+        {
+            "type": "paragraph",
+            "content": "Made a function called getProcessedImages, which gets images from the current working directory, and expects the test data and training data to be in folders named test_set and train_set, respectively. It then rescales the images by 1./255, and if the data is a training set, then getProcessedImages augments the images using shear of 0.2, zoom of 0.2 and horizontally flips the image. getProcessedImages then resizes the images (64 x 64), sets the class mode as binary, and returns a dataset (DirectoryIterator) which is ready to be used in the keras Sequential CNN."
+        },
+        {
+            "type": "subheading",
+            "content": "Predicting the class of new images"
+        },
+        {
+            "type": "paragraph",
+            "content": "I then used the CNN to make predictions of the class of new images. To do this I made a function called imageIdentify, which returns the CNN’s prediction of the identity of your images. imageIdentify achieves this by firstly creating a list of file names for images within the imageDir (a pathway to the folder containing images you want the CNN to identify), using the function isImage I created (which uses a regular expression to check whether a file is an image). Then, for each file name, imageIdentify loads the image, predicts the identity of each image using your CNN, uses the file name from your CNN training set to state the prediction, and finally uses the string of file names of the images you want to identify to reference the predictions of identity, and returns  the CNN’s prediction of the identity of your images with a dictionary of the file names of the images for reference."
+        }
+    ]
+}
