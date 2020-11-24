@@ -1,28 +1,34 @@
+import React from 'react';
+import { Link, Route, BrowserRouter as Router, Switch } from 'react-router-dom';
 
-import './App.css';
-import { title, content } from './shellCrash.json';
+import Page from './components/page';
+import CNN from './pageDefinitions/CNN.json';
+import shellCrash from './pageDefinitions/shellCrash.json'
 
 const App = () => (
-  <div className="App">
-    <h1 className={title.className}>{title.content}</h1>
-    {content.map(({ type, items, content, path}) => {
-      if (type === 'list') {
-        return (
-          <ul>
-            {items.map((name) => <li>{name} </li>)}
-          </ul>
-        );
-      } else if (type === 'paragraph') {
-        return <p>{content}</p>;
-      } else if (type === 'subheading') {
-        return <h4>{content}</h4>;
-      } else if (type === 'image') {
-        import(`./assets/images/${path}`)
-        return <img src={path} alt="Picture" />;
-      }
-      return '';
-    })}
-  </div>
+  <Router>
+    <nav>
+      <ul>
+        <li>
+          <Link to="/">Home</Link>
+        </li>
+        <li>
+          <Link to="/cnn">CNN</Link>
+        </li>
+        <li>
+          <Link to="/shellcrash">Shell Crash</Link>
+        </li>
+      </ul>
+    </nav>
+    <Switch>
+      <Route path="/cnn" >
+        <Page description={CNN} />
+      </Route>
+      <Route path="/shellcrash" >
+        <Page description={shellCrash} />
+      </Route>
+    </Switch>
+  </Router>
 );
 
 export default App;

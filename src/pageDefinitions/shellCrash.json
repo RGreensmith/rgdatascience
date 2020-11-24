@@ -13,8 +13,7 @@
             "Restart","F10 'Bios setup", "Navigate right to 'system configuration'",
             "Navigate down to 'virtualisation technology'","Enter","Select Enable","Enter",
             "F10 'save and exit'","Exit saving changes"]},
-        {"type":"paragraph","content":"Afterwards, I had to install lsb_release, git and zsh"},
-        {"type":"image","path":"rowanTree.jpg"}
+        {"type":"paragraph","content":"Afterwards, I had to install lsb_release, git and zsh"}
     ]
 }
 
