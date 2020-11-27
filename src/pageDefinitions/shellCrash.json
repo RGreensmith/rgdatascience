@@ -6,11 +6,11 @@
         {"type": "subheading","content": "Update wsl to version 2"},
         {"type":"list","items":["Open windows PowerShell as administrator",
             "Follow steps 1-5 from https://docs.microsoft.com/en-us/windows/wsl/install-win10",
-            "Follow instructions from section ‘Set your distribution version to WSL1 or WSL 2’"]},
+            "Follow instructions from section titled ‘Set your distribution version to WSL1 or WSL 2’"]},
         {"type":"subheading","content":"Enable virtualisation"},
         {"type":"list","items":["Hold shift when restarting computer",
             "Troubleshoot","Advanced options","UEFI firmware settings",
-            "Restart","F10 'Bios setup", "Navigate right to 'system configuration'",
+            "Restart","F10 'Bios setup'", "Navigate right to 'system configuration'",
             "Navigate down to 'virtualisation technology'","Enter","Select Enable","Enter",
             "F10 'save and exit'","Exit saving changes"]},
         {"type":"paragraph","content":"Afterwards, I had to install lsb_release, git and zsh"}
