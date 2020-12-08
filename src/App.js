@@ -2,9 +2,13 @@ import React from 'react';
 import { Link, Route, BrowserRouter as Router, Switch } from 'react-router-dom';
 
 import Page from './components/page';
+import About from './pageDefinitions/About.json';
 import CNN from './pageDefinitions/CNN.json';
-import shellCrash from './pageDefinitions/shellCrash.json'
-import ClassificationApplication from './pageDefinitions/ClassificationApplication'
+import ClassificationApplication from './pageDefinitions/ClassificationApplication.json';
+import shellCrash from './pageDefinitions/shellCrash.json';
+import installZsh from './pageDefinitions/installZsh.json';
+
+
 
 const App = () => (
   <Router>
@@ -14,26 +18,40 @@ const App = () => (
           <Link to="/">Home</Link>
         </li>
         <li>
-          <Link to="/cnn">CNN</Link>
+          <Link to="/About">About</Link>
         </li>
         <li>
-          <Link to="/shellcrash">Shell Crash</Link>
+          <Link to="/cnn">Convolutional Neural Networks</Link>
         </li>
         <li>
           <Link to="/ClassificationApplication">Classification Application</Link>
         </li>
+        <li>
+          <Link to="/shellcrash">Debian Shell Crash Solution</Link>
+        </li>
+        <li>
+          <Link to="/installZsh">How to install Zsh</Link>
+        </li>
+        
       </ul>
     </nav>
     <Switch>
+      <Route path="/About" >
+        <Page description={About} />
+      </Route>
       <Route path="/cnn" >
         <Page description={CNN} />
-      </Route>
-      <Route path="/shellcrash" >
-        <Page description={shellCrash} />
       </Route>
       <Route path="/ClassificationApplication" >
         <Page description={ClassificationApplication} />
       </Route>
+      <Route path="/shellcrash" >
+        <Page description={shellCrash} />
+      </Route>
+      <Route path="/installZsh" >
+        <Page description={installZsh} />
+      </Route>
+      
     </Switch>
   </Router>
 );

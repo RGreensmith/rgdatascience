@@ -1,0 +1,21 @@
+{
+    "title":{"content": "How to install zsh from a Debian terminal", "className": "title--blue"},
+    
+    "content":[
+        {"type": "paragraph", "content": "1. Open Debian terminal"},
+
+        {"type":"paragraph", "content":"2. Update package repository cache:"},
+        {"type":"list", "items": ["sudo apt-get update"]},
+
+        {"type": "paragraph","content": "3. Install zsh:"},
+        {"type": "list","items": ["sudo apt-get install zsh","zsh --version"]},
+
+        {"type": "paragraph","content": "4. Make zsh the default shell:"},
+        {"type": "list","items": ["whereis zsh","sudo usermod -s /usr/bin/zsh $(whoami)"]},
+
+        {"type": "paragraph","content": "5. Close terminal and open new terminal"},
+        
+        {"type": "paragraph","content": "6. Selet key 2 from menu of z shell configuration suggestions"}
+    ]
+}
+

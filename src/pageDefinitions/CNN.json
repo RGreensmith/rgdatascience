@@ -6,7 +6,7 @@
     "content": [
         {
             "type": "paragraph",
-            "content": "This article is my current understanding and interpretation of how Convolutional Neural Networks (hereafter CNN) work and the steps I took to create and train a CNN; this is not peer reviewed, therefore it should not be used as reference/learning material, and credible source of information."
+            "content": "This article is my current understanding and interpretation of how Convolutional Neural Networks (hereafter CNN) work and the steps I took to create and train a CNN."
         },
         {
             "type": "paragraph",

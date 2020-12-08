@@ -1,0 +1,91 @@
+{
+    "title": {
+        "content": "About",
+        "className": "title--blue"
+    },
+    "content": [
+        {
+            "type": "subheading",
+            "content": "Website Structure"
+        },
+        {
+            "type": "paragraph",
+            "content": "I decided to build this website application using javascript. The website is client rendered using React, and I run this website in a UNIX terminal. I structured the website to use a json description for each of the pages. I set up a Linux subsystem for my programming (as it is a more versatile and widely used operating system for machine learning applications) and use the command line for git and installing software’s and libraries."
+        },
+        {
+            "type": "subheading",
+            "content": "Website Content"
+        },
+        {
+            "type":"paragraph",
+            "content":"This website contains articles covering a variety of topics, such as:"
+        },
+        {
+            "type": "list",
+            "items": [
+                        "My understanding of how various machine learning techniques work",
+                        "How I coded up the applications of machine learning techniques",
+                        "Solutions to general computing issues",
+                        "General programming",
+                        "Marine science blog posts"
+                    ]
+        },        
+        {
+            "type":"subheading",
+            "content": "About Me"
+        },
+        {
+            "type": "paragraph",
+            "content": "I have a first-class BSc (Hons) in marine biology and an MScRes in ocean sciences currently under assessment, both from Bangor University."
+        },
+        {
+            "type": "paragraph",
+            "content": "I am currently doing a machine learning course (using Python) (Udemy Machine Learning A-Z: Hands-On Python & R in Data Science by Kirill Eremenko and Hadelin de Ponteves). So far I have covered:"
+        },
+        {
+            "type":"list",
+            "items":[
+                "Deep learning (artificial neural network and convolutional neural network for computer vision) using Tensorflow",
+                "Association rule learning (apriori and eclat)",
+                "Reinforcement learning (upper confidence bound and Thompson sampling)",
+                "Regression (simple and multiple linear, polynomial, support vector, decision tree and random forest)",
+                "Classification (logistic regression, k nearest neighbours, support vector machine, kernel support vector machine, naïve bayes, decision tree and random forest)"
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": "Whilst undertaking my machine learning course, I used my new skills to create a convolutional neural network trained to identify my photos (see ‘Convolutional Neural Networks’) and a classification application (see ‘Classification Application’). I decided to do these projects to solidify my understanding of what I learnt on the course, and gain more experience using python, as I only started using it when I began this course."
+        },
+        {
+            "type": "paragraph",
+            "content": "During my MScRes, I wrote a fully documented, downloadable R package for my data analysis, which can be viewed at https://github.com/RGreensmith/MScResPACK. The statistical methods I used include:"
+        },
+        {
+            "type":"list",
+            "items":[
+                "K means clustering",
+                "Hierarchical agglomerative clustering",
+                "Principle component analysis",
+                "Random walk metropolis sampling",
+                "Zero-inflated generalised linear models",
+                "K fold cross validation"
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": "I code in python and R, and through creating this website have gained experience with javascript, html and CSS. Throughout my BSc Marine Biology and MScRes Ocean Sciences, I have gained experience using GIS software such as ArcGIS and statistical software such as Excel, SPSS and Primer, MATLAB, and data portals such as EMODnet and Digimap."
+        },
+        {
+            "type": "paragraph",
+            "content": "Github: https://github.com/RGreensmith"
+        },
+        {
+            "type": "paragraph",
+            "content": "LinkedIn: https://www.linkedin.com/in/rosemary-greensmith-018b01b5/"
+        },
+        {
+            "type": "paragraph",
+            "content": "Twitter: https://twitter.com/RVGreensmith"
+        }
+    ]
+}
