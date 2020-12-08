@@ -4,6 +4,7 @@ import { Link, Route, BrowserRouter as Router, Switch } from 'react-router-dom';
 import Page from './components/page';
 import CNN from './pageDefinitions/CNN.json';
 import shellCrash from './pageDefinitions/shellCrash.json'
+import ClassificationApplication from './pageDefinitions/ClassificationApplication'
 
 const App = () => (
   <Router>
@@ -18,6 +19,9 @@ const App = () => (
         <li>
           <Link to="/shellcrash">Shell Crash</Link>
         </li>
+        <li>
+          <Link to="/ClassificationApplication">Classification Application</Link>
+        </li>
       </ul>
     </nav>
     <Switch>
@@ -26,6 +30,9 @@ const App = () => (
       </Route>
       <Route path="/shellcrash" >
         <Page description={shellCrash} />
+      </Route>
+      <Route path="/ClassificationApplication" >
+        <Page description={ClassificationApplication} />
       </Route>
     </Switch>
   </Router>
