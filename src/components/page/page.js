@@ -15,7 +15,10 @@ const Page = ({description: { title, content }}) => (
                 return <p>{content}</p>;
             } else if (type === 'subheading') {
                 return <h4>{content}</h4>;
+            } else if (type === 'image') {
+                return <img src={content} />
             }
+
             return '';
         })}
     </div>

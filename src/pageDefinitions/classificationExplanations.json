@@ -1,0 +1,22 @@
+{
+    "title":{"content": "Classification Algorithms", "className": "title--blue"},
+    
+    "content":[
+        {"type":"paragraph","content":"Classification algorithms are supervised machine learning techniques (rather than unsupervised, semi-supervised and reinforcement learning), which means that the main aim is to find the best model which predicts the y for new x data 3. Furthermore, a unique attribute of supervised learning algorithms is that they are given a set of instances with a y feature, also known as dependent variable or target, with the input data 3, 7. Classification algorithms are used for tasks where the y variable is discrete 3. When y has two classes, a binary classification approach is taken, whereas, in the instance where the y has more than two classes, a multi-class classification approach must be taken. There are two main approaches for multi-class problems: one vs all and one vs one. When there are n classes of y, the one vs all approach only uses n binary classification models, in contrast, the one vs one approach uses"},
+        {"type":"image","content":"classifierExplanationImages/CE0.png"},
+        {"type":"paragraph","content":"classification models. The focus of this article is to explain my understanding of classification techniques for binary class problems."},
+        {"type": "paragraph","content": "Binary classification algorithms aim to predict whether y is 0 or 1, based on probability, by finding the optimal decision boundary within the feature space and using a mapping function 7. The feature space is an n dimensional space of input features, where n is determined by the number of independent variables, which are commonly referred to as features in machine learning literature. Classification algorithms can be split by the type of learner they are, a lazy learner or an eager learner 7. Lazy learners wait until test data is presented, then use the most relevant training data to train on, whereas eager learners make a model using all training data before test data is provided, and so the instance space is taken up with one hypothesis. In contrast to eager learners, a lazy learner takes less time to train but more time when making predictions. K-nearest neighbour and case-based reasoning are examples of lazy learners, and decision trees, naïve bayes and artificial neural networks are examples of eager learners."},
+        {"type": "paragraph","content": "A classification problem is linear if the classes can be separated linearly, if not, then the problem is non-linear 7. Some classifiers perform better with linear data and others with non-linear. Examples of linear classifiers are logistic regression 17, support vector machine 19 and naïve bayes 9, 17, and examples of non-linear classifiers are k-nearest neighbours 9, 11, kernel support vector machine 20, decision tree 11 and random forest 11."},
+        {"type": "paragraph", "content": "Examples of linear and non-linear data with a linear and non-linear classifier fitted are demonstrated in figure 1. The left-hand column is the input data (synthetic for concept visualisation), the top row of graphs are linear data, and the bottom two rows are non-linear data. The centre column shows naïve bayes classifier (a linear classifier), and the right-hand column shows K-nearest neighbours’ classifier (non-linear classifier). The accuracy scores (in the bottom corner of each naïve bayes and k-nearest neighbours plot) show that naïve bayes performed better with the linearly separable data (top centre, score 0.95), compared to k-nearest neighbours (top right, score 0.93), and compared to the non-linear data (centre, score 0.90; bottom centre, score 0.70). On the other hand, k-nearest neighbours performed better with the non-linear data (centre right, score 0.97; bottom right, score 0.93)."},
+        
+        {"type": "subheading","content": ""},
+        {"type":"list","items":["",
+            "",
+            ""]},
+        {"type":"subheading","content":""},
+        {"type":"list","items":["",
+            "","",""]},
+        {"type":"paragraph","content":""}
+    ]
+}
+

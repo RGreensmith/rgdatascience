@@ -5,6 +5,7 @@ import Page from './components/page';
 import About from './pageDefinitions/About.json';
 import CNN from './pageDefinitions/CNN.json';
 import ClassificationApplication from './pageDefinitions/ClassificationApplication.json';
+import classificationExplanations from './pageDefinitions/classificationExplanations.json';
 import shellCrash from './pageDefinitions/shellCrash.json';
 import installZsh from './pageDefinitions/installZsh.json';
 
@@ -24,6 +25,9 @@ const App = () => (
           <Link to="/cnn">Convolutional Neural Networks</Link>
         </li>
         <li>
+          <Link to="/classificationExplanations">Classification Algorithm Intro</Link>
+        </li>
+        <li>
           <Link to="/ClassificationApplication">Classification Application</Link>
         </li>
         <li>
@@ -41,6 +45,9 @@ const App = () => (
       </Route>
       <Route path="/cnn" >
         <Page description={CNN} />
+      </Route>
+      <Route path="/classificationExplanations" >
+        <Page description={classificationExplanations} />
       </Route>
       <Route path="/ClassificationApplication" >
         <Page description={ClassificationApplication} />
