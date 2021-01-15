@@ -2,6 +2,7 @@ import React from 'react';
 import { Link, Route, BrowserRouter as Router, Switch } from 'react-router-dom';
 
 import Page from './components/page';
+import Home from './components/home';
 import About from './pageDefinitions/About.json';
 import CNN from './pageDefinitions/CNN.json';
 import ClassificationApplication from './pageDefinitions/ClassificationApplication.json';
@@ -36,7 +37,6 @@ const App = () => (
         <li>
           <Link to="/installZsh">How to install Zsh</Link>
         </li>
-        
       </ul>
     </nav>
     <Switch>
@@ -58,7 +58,9 @@ const App = () => (
       <Route path="/installZsh" >
         <Page description={installZsh} />
       </Route>
-      
+      <Route path="/" >
+        <Home/>
+      </Route>
     </Switch>
   </Router>
 );
