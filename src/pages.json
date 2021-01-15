@@ -1,0 +1,39 @@
+[
+    {
+        "title": "About",
+        "image": "",
+        "path": "/About",
+        "description": "./pageDefinitions/About.json"
+    },
+    {
+        "title": "Convolutional Neural Network",
+        "image": "",
+        "path": "/ConvolutionalNeuralNetwork",
+        "description": "./pageDefinitions/CNN.json"
+    },
+    {
+        "title": "Classification Application",
+        "image": "",
+        "path": "/ClassificationApplication",
+        "description": "./pageDefinitions/ClassificationApplication.json"
+    },
+    {
+        "title": "Classification Algorithms Intro",
+        "image": "",
+        "path": "/ClassificationAlgorithmsIntro",
+        "description": "./pageDefinitions/classificationExplanations.json"
+    },
+    {
+        "title": "Debian Shell Crash Solution",
+        "image": "",
+        "path": "/DebianShellCrashSolution",
+        "description": "./pageDefinitions/shellCrash.json"
+    },
+    {
+        "title": "How To Install Zsh",
+        "image": "",
+        "path": "/HowToInstallZsh",
+        "description": "./pageDefinitions/installZsh.json"
+    }
+
+]
