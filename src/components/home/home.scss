@@ -1,0 +1,41 @@
+@font-face {
+  font-family: "Lilita One";
+  src: url('../../fonts/Lilita_One/LilitaOne-Regular.ttf') format("truetype");
+}
+
+.banner {
+  display: flex;
+  height: 50vh;
+  background-image: url("./homeImages/bannerImage.JPG");
+  background-size: cover;
+  background-position: center;
+  align-items: center;
+}
+
+.banner_title {
+  font-family: "Lilita One";
+  font-weight: 400;
+  font-size: 50px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+
+  span {
+    min-width: 157px;
+    display: inline-block;
+    text-align: center;
+    margin-right: 5px;
+  }
+
+  @media (max-width: 762px) {
+    font-size: 30px;
+  }
+}
+
+.home_description {
+  text-align: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}

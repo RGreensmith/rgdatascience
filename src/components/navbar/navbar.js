@@ -1,8 +1,8 @@
 
-import './page.css';
+import './navbar.css';
 
-const Page = ({description: { title, content }}) => (
-    <div className="page">
+const Navbar = ({description: { title, content }}) => (
+    <div className="navbar">
         <div className="banner">
             <h1 className="banner_title">{title.content}</h1>
         </div>
@@ -30,4 +30,4 @@ const Page = ({description: { title, content }}) => (
 
 );
 
-export default Page;
+export default Navbar;
