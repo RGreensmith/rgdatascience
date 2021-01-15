@@ -19,7 +19,7 @@ const Page = ({description: { title, content }}) => (
             } else if (type === 'subheading2') {
                 return <h3>{content}</h3>;
             } else if (type === 'image') {
-                return <img src={content} className={className} />
+                return <img src={content} className={className} alt=""/>
             }
 
             return '';
