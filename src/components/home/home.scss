@@ -1,0 +1,21 @@
+
+.home {
+  padding-bottom: 20px;
+
+  .banner_title {
+    span {
+      min-width: 157px;
+      display: inline-block;
+      text-align: center;
+      margin-right: 5px;
+    }
+  }
+
+  .home_description {
+    text-align: center;
+    padding-top: 15px;
+    max-width: 1100px;
+    margin: 0 auto;
+    font-size: 20px;
+  }
+}

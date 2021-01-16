@@ -1,0 +1,31 @@
+@import '../../styles/variables.scss';
+
+.banner {
+  display: flex;
+  height: 35vh;
+  background-image: url("./bannerImage.JPG");
+  background-size: cover;
+  background-position: center;
+  align-items: center;
+  position: sticky;
+  top: 60px;
+  z-index: -1;
+  text-align: center;
+
+  .banner_title {
+    font-family: "Lilita One";
+    font-weight: 400;
+    font-size: 60px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    
+    @media (max-width: 762px) {
+      font-size: 30px;
+    }
+  }
+}
+
+
