@@ -1,12 +1,20 @@
 
+import pages from '../../pages';
+import Thumbnails from '../thumbnails';
 import './home.scss';
+import Banner from '../banner/';
 
 const Home = () => (
     <div className="home">
-        <div className="banner">
-            <h1 className="banner_title"><span>Rose Greensmith</span> <span>Science Blog</span> </h1>
+        <Banner>
+          <span>Rose Greensmith</span> <span>Science Blog</span>
+        </Banner>
+        < div className="pageContainer">
+            <p className="home_description" >The main topics covered by this blog include: marine biology and ecology (coming soon), physical oceanography (coming soon), 
+            machine learning, statistics, programming in R (coming soon), python and the command line, and troubleshooting programme issues.</p>
+            <Thumbnails pages={pages}/>
         </div>
-        <p className="home_description" >Blog about science</p>
+       
     </div>
 );
 

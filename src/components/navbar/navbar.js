@@ -1,33 +1,44 @@
 
-import './navbar.css';
+import { useState } from 'react';
+import { Link } from 'react-router-dom';
+import './navbar.scss';
 
-const Navbar = ({description: { title, content }}) => (
-    <div className="navbar">
-        <div className="banner">
-            <h1 className="banner_title">{title.content}</h1>
+const Navbar = ({ pages }) => {
+    const [articlesOpen, setArticlesOpen] = useState(false);
+    return (
+        <div className="navbarContainer">
+            <nav className="navbar">
+                <div className="brand">
+                    RGScience
+                </div>
+                <ul>
+                    <li>
+                        <Link to="/">Home</Link>
+                    </li>
+                    <li>
+                        <Link to="/About">About</Link>
+                    </li>
+                    <li onClick={() => {
+                        setArticlesOpen(!articlesOpen);
+                    }}>
+                        Articles
+                        {
+                            articlesOpen ? <ul>
+                                {
+                                    pages.map(({ title, path }) => (
+                                        <li>
+                                            <Link to={path}>{title}</Link>
+                                        </li>
+                                    ))
+                                }
+                            </ul> : ''
+                        }
+                    </li>
+
+                </ul>
+            </nav>
         </div>
-        {content.map(({ type, items, content, className }) => {
-            className = className || '';
-            if (type === 'list') {
-                return (
-                    <ul>
-                        {items.map((name) => <li>{name} </li>)}
-                    </ul>
-                );
-            } else if (type === 'paragraph') {
-                return <p className={className} >{content}</p>;
-            } else if (type === 'subheading') {
-                return <h4>{content}</h4>;
-            } else if (type === 'subheading2') {
-                return <h3>{content}</h3>;
-            } else if (type === 'image') {
-                return <img src={content} className={className} alt=""/>
-            }
-
-            return '';
-        })}
-    </div>
-
-);
+    )
+};
 
 export default Navbar;

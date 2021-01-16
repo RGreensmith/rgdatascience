@@ -6,31 +6,31 @@ import installZsh from './pageDefinitions/installZsh.json';
 export default [
     {
         "title": "Convolutional Neural Network",
-        "image": "",
+        "image": "thumbnailImages/cnnBackground.png",
         "path": "/ConvolutionalNeuralNetwork",
         "description": CNN
     },
     {
         "title": "Classification Application",
-        "image": "",
+        "image": "thumbnailImages/KNearestNeighboursTest.png",
         "path": "/ClassificationApplication",
         "description": ClassificationApplication
     },
     {
         "title": "Classification Algorithms Intro",
-        "image": "",
+        "image": "thumbnailImages/classAlgorithmBackground.png",
         "path": "/ClassificationAlgorithmsIntro",
         "description": classificationExplanations
     },
     {
         "title": "Debian Shell Crash Solution",
-        "image": "",
+        "image": "thumbnailImages/debianCrash.png",
         "path": "/DebianShellCrashSolution",
         "description": shellCrash
     },
     {
         "title": "How To Install Zsh",
-        "image": "",
+        "image": "thumbnailImages/zshInstall.png",
         "path": "/HowToInstallZsh",
         "description": installZsh
     }

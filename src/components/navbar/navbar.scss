@@ -1,0 +1,56 @@
+@import '../../styles/variables.scss';
+
+$navbar-height: 60px;
+
+.navbarContainer {
+  height: $navbar-height;
+  width: 100%;
+  position: relative;
+}
+
+.navbar {
+  height: $navbar-height;
+  width: 100%;
+  background-color: #79c6c0;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+  font-family: "Lilita One";
+  position: fixed;
+
+  .brand {
+    line-height: $navbar-height;
+    font-size: 30px;
+  }
+
+  ul {
+    display: inline-flex;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+
+    li {
+      height: $navbar-height;
+      line-height: $navbar-height;
+      padding: 0 10px;
+      cursor: pointer;
+
+      a {
+        text-decoration: none;
+
+        &:visited {
+          color: black;
+        }
+      }
+
+      ul {
+        position: absolute;
+        right: 0;
+        z-index: 3;
+        display: block;
+        background-color: #baefdb;
+      }
+    }
+  }
+}
