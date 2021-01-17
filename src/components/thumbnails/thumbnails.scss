@@ -25,7 +25,6 @@
     
     a {
       box-sizing: border-box;
-      position: relative;
       vertical-align: bottom;
       height: 100%;
       width: 100%;
@@ -34,6 +33,7 @@
       background: linear-gradient(0deg, rgba(121,198,192,1) 17%, rgba(121,198,192,0.6026785714285714) 37%, rgba(121,198,192,0) 65%);
       border-radius: 5px;
       text-decoration: none;
+      color: black;
 
       &:visited {
         color: black;

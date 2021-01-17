@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import Banner from '../banner';
+import ReferencePopover from '../referencePopover';
 import './page.scss';
 
 const Page = ({description: { title, content }}) => {
@@ -13,7 +14,7 @@ const Page = ({description: { title, content }}) => {
         </Banner>
         <div className="pageContainer">
             <div className="textContainer">
-                {content.map(({ type, items, content, className }) => {
+                {content.map(({ type, items, content, className, path, reference }) => {
                     className = className || '';
                     if (type === 'list') {
                         return (
@@ -29,6 +30,15 @@ const Page = ({description: { title, content }}) => {
                         return <h3>{content}</h3>;
                     } else if (type === 'image') {
                         return <img src={content} className={className} alt=""/>
+                    } else if (type === 'link') {
+                        return <a target="_blank" href={path}>{content}</a>
+                    } else if (type === 'referencePopover') {
+                        
+                        return (
+                            <ReferencePopover reference={reference} className={className}>
+                                {content}
+                            </ReferencePopover>
+                        );
                     }
                     return '';
                 })}
