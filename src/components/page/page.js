@@ -1,8 +1,13 @@
+import { useEffect } from 'react';
 import Banner from '../banner';
 import './page.scss';
 
-const Page = ({description: { title, content }}) => (
-    <div className="page">
+const Page = ({description: { title, content }}) => {
+    useEffect(() => {
+        window.scrollTo(0,0)
+    }, [title, content]);
+
+    return (<div className="page">
         <Banner>
             {title.content}
         </Banner>
@@ -25,13 +30,11 @@ const Page = ({description: { title, content }}) => (
                     } else if (type === 'image') {
                         return <img src={content} className={className} alt=""/>
                     }
-
                     return '';
-                })}    
+                })}
             </div>
         </div>
-    </div>
-
-);
+    </div>);
+};
 
 export default Page;
