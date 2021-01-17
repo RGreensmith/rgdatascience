@@ -1,0 +1,15 @@
+@import '../../styles/variables.scss';
+
+.react-tiny-popover-container {
+  background-color: white;
+  padding: 10px;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+.reference-popover {
+  color: blue;
+  vertical-align: super;
+  font-size: 10px;
+  cursor: pointer;
+}

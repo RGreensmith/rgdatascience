@@ -76,8 +76,9 @@
             "content": "I code in python and R, and through creating this website have gained experience with javascript, html and CSS. Throughout my BSc Marine Biology and MScRes Ocean Sciences, I have gained experience using GIS software such as ArcGIS and statistical software such as Excel, SPSS and Primer, MATLAB, and data portals such as EMODnet and Digimap."
         },
         {
-            "type": "paragraph",
-            "content": "Github: https://github.com/RGreensmith"
+            "type": "link",
+            "path": "https://github.com/RGreensmith",
+            "content": "Github"
         },
         {
             "type": "paragraph",
