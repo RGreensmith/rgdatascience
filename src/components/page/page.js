@@ -31,7 +31,7 @@ const Page = ({description: { title, content }}) => {
                     } else if (type === 'image') {
                         return <img src={content} className={className} alt=""/>
                     } else if (type === 'link') {
-                        return <a target="_blank" href={path}>{content}</a>
+                        return <a target="_blank" rel="noreferrer" href={path}>{content}</a>
                     } else if (type === 'referencePopover') {
                         
                         return (
