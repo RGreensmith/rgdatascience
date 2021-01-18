@@ -40,7 +40,18 @@
         },
         {
             "type": "paragraph",
-            "content": "I am currently doing a machine learning course (using Python) (Udemy Machine Learning A-Z: Hands-On Python & R in Data Science by Kirill Eremenko and Hadelin de Ponteves). So far I have covered:"
+            "content": "I am currently doing a machine learning course (using Python) by ",
+            "className": "inline"
+        },
+        {
+            "type": "link",
+            "path": "https://www.udemy.com/course/machinelearning/",
+            "content": "Kirill Eremenko and Hadelin de Ponteves on Udemy"
+        },
+        {
+            "type": "paragraph",
+            "content": ". So far I have covered:",
+            "className": "inline"
         },
         {
             "type":"list",
@@ -58,7 +69,19 @@
         },
         {
             "type": "paragraph",
-            "content": "During my MScRes, I wrote a fully documented, downloadable R package for my data analysis, which can be viewed at https://github.com/RGreensmith/MScResPACK. The statistical methods I used include:"
+            "content": "During my MScRes, I wrote a fully documented, downloadable R package for my data analysis, which can be viewed in my ",
+            "className": "inline"
+            
+        },
+        {
+            "type": "link",
+            "path": "https://github.com/RGreensmith/MScResPACK",
+            "content": "MScResPACK repository"
+        },
+        {
+            "type": "paragraph",
+            "content": ". The statistical methods I used include:",
+            "className": "inline"
         },
         {
             "type":"list",
@@ -74,19 +97,6 @@
         {
             "type": "paragraph",
             "content": "I code in python and R, and through creating this website have gained experience with javascript, html and CSS. Throughout my BSc Marine Biology and MScRes Ocean Sciences, I have gained experience using GIS software such as ArcGIS and statistical software such as Excel, SPSS and Primer, MATLAB, and data portals such as EMODnet and Digimap."
-        },
-        {
-            "type": "link",
-            "path": "https://github.com/RGreensmith",
-            "content": "Github"
-        },
-        {
-            "type": "paragraph",
-            "content": "LinkedIn: https://www.linkedin.com/in/rosemary-greensmith-018b01b5/"
-        },
-        {
-            "type": "paragraph",
-            "content": "Twitter: https://twitter.com/RVGreensmith"
         }
     ]
 }
