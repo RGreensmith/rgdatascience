@@ -6,11 +6,25 @@
     "content": [
         {
             "type": "paragraph",
-            "content": "This article is my current understanding and interpretation of how Convolutional Neural Networks (hereafter CNN) work and the steps I took to create and train a CNN."
+            "content": "This article is my current understanding and interpretation of how Convolutional Neural Networks (hereafter CNN) work and the steps I took to create and train a CNN, based on knowledge gained from a machine learning course by ",
+            "className": "inline"
+        },
+        {
+            "type": "link",
+            "path": "https://www.udemy.com/course/machinelearning/",
+            "content": "Kirill Eremenko and Hadelin de Ponteves on Udemy.",
+            "className": "inline"
         },
         {
             "type": "paragraph",
-            "content": "I created a Convolutional Neural Network (CNN) for binary classification of images."
+            "content": "I created a Convolutional Neural Network (CNN) for binary classification of images. The code can be viewed in my ",
+            "className":"inline"
+        },
+        {
+            "type": "link",
+            "path": "https://github.com/RGreensmith/Convolutional_Neural_Network",
+            "content": "Convolutional_Neural_Network repository.",
+            "className": "inline"
         },
         {
             "type": "subheading",
