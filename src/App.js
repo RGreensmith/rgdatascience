@@ -25,6 +25,17 @@ const App = () => (
         <Home/>
       </Route>
     </Switch>
+    <div className="footer">
+      <a target="_blank" rel="noreferrer" href={"https://github.com/RGreensmith"}>
+        <img src="footerLinkImages/GitHubLogo.png" className="footerLink" alt="GitHub Logo" />
+      </a>
+      <a target="_blank" rel="noreferrer" href={"https://www.linkedin.com/in/rosemary-greensmith-018b01b5/"}>
+        <img src="footerLinkImages/linkedInLogo.png" className="footerLink" alt="LinkedIn Logo" />
+      </a>
+      <a target="_blank" rel="noreferrer" href={"https://twitter.com/RVGreensmith"}>
+        <img src="footerLinkImages/twitterLogo.png" className="footerLink" alt="Twitter Logo" />
+      </a>
+    </div>
   </Router>
 );
 
