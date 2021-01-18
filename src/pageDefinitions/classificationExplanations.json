@@ -2,22 +2,286 @@
     "title":{"content": "Classification Algorithms", "className": "title--blue"},
     
     "content":[
+        
         {"type": "paragraph","content":"Classification algorithms are supervised machine learning techniques (rather than unsupervised, semi-supervised and reinforcement learning), which means that the main aim is to find the best model which predicts the y for new x data ",
             "className": "inline"}, 
-        {"type": "referencePopover","content":"3","reference":{"path":"https://www.biostat.wisc.edu/~craven/cs760/lectures/ml-overview.pdf", "text":"Machine-Learning Tasks and Feature Space Representations, Mark Craven and David Page (2018)"},
-        "className": "inline"},
-        {"type": "paragraph","content":". Furthermore, a unique attribute of supervised learning algorithms is that they are given a set of instances with a y feature, also known as dependent variable or target, with the input data 3, 7. Classification algorithms are used for tasks where the y variable is discrete 3. When y has two classes, a binary classification approach is taken, whereas, in the instance where the y has more than two classes, a multi-class classification approach must be taken. There are two main approaches for multi-class problems: one vs all and one vs one. When there are n classes of y, the one vs all approach only uses n binary classification models, in contrast, the one vs one approach uses:",
-            "className": "inline"},
-        {"type": "image","content":"classifierExplanationImages/CE0.png","className":"inline"},
-        {"type": "paragraph","content":"classification models. The focus of this article is to explain my understanding of classification techniques for binary class problems.",
-            "className": "inline"},
-        {"type": "paragraph","content": "Binary classification algorithms aim to predict whether y is 0 or 1, based on probability, by finding the optimal decision boundary within the feature space and using a mapping function 7. The feature space is an n dimensional space of input features, where n is determined by the number of independent variables, which are commonly referred to as features in machine learning literature. Classification algorithms can be split by the type of learner they are, a lazy learner or an eager learner 7. Lazy learners wait until test data is presented, then use the most relevant training data to train on, whereas eager learners make a model using all training data before test data is provided, and so the instance space is taken up with one hypothesis. In contrast to eager learners, a lazy learner takes less time to train but more time when making predictions. K-nearest neighbour and case-based reasoning are examples of lazy learners, and decision trees, naïve bayes and artificial neural networks are examples of eager learners."},
-        {"type": "paragraph","content": "A classification problem is linear if the classes can be separated linearly, if not, then the problem is non-linear 7. Some classifiers perform better with linear data and others with non-linear. Examples of linear classifiers are logistic regression 17, support vector machine 19 and naïve bayes 9, 17, and examples of non-linear classifiers are k-nearest neighbours 9, 11, kernel support vector machine 20, decision tree 11 and random forest 11."},
-        {"type": "paragraph", "content": "Examples of linear and non-linear data with a linear and non-linear classifier fitted are demonstrated in figure 1. The left-hand column is the input data (synthetic for concept visualisation), the top row of graphs are linear data, and the bottom two rows are non-linear data. The centre column shows naïve bayes classifier (a linear classifier), and the right-hand column shows K-nearest neighbours’ classifier (non-linear classifier). The accuracy scores (in the bottom corner of each naïve bayes and k-nearest neighbours plot) show that naïve bayes performed better with the linearly separable data (top centre, score 0.95), compared to k-nearest neighbours (top right, score 0.93), and compared to the non-linear data (centre, score 0.90; bottom centre, score 0.70). On the other hand, k-nearest neighbours performed better with the non-linear data (centre right, score 0.97; bottom right, score 0.93)."},
-        {"type": "image","content": "classifierExplanationImages/CE1.png", "className":"center"},
-        {"type": "paragraph","content":"Figure 1. Examples of linear and non-linear data fitted with a linear and non-linear classifier. Synthetic data generated from the sklearn dataset library."},
-        {"type": "paragraph", "content":"Classifiers can also be frequency based or geometry based 26. Examples of frequency-based classifiers are Bayes algorithms. Examples of geometry-based classifiers are K-nearest neighbour algorithms."},
-        {"type": "subheading2","content": "Linear Classifiers"},
+        {
+            "type": "referencePopover",
+            "content":" 3",
+            "reference":{
+                "path":"https://www.biostat.wisc.edu/~craven/cs760/lectures/ml-overview.pdf",
+                "text":"Machine-Learning Tasks and Feature Space Representations, Mark Craven and David Page (2018)"
+            },
+            "className": "inline"
+        },
+        {
+            "type": "paragraph",
+            "content":". Furthermore, a unique attribute of supervised learning algorithms is that they are given a set of instances with a y feature, also known as dependent variable or target, with the input data",
+            "className": "inline"
+        },
+        {
+            "type": "referencePopover",
+            "content": " 3,",
+            "reference": {
+                "path": "https://www.biostat.wisc.edu/~craven/cs760/lectures/ml-overview.pdf",
+                "text": "Machine-Learning Tasks and Feature Space Representations, Mark Craven and David Page (2018)"
+            },
+            "className": "inline"
+        },
+        {
+            "type": "referencePopover",
+            "content": " 7",
+            "reference": {
+                "path": "https://towardsdatascience.com/machine-learning-classifiers-a5cc4e1b0623",
+                "text": "Machine Learning Classifiers, Sidath Asiri (2018)"
+            },
+            "className": "inline"
+        },
+        {
+            "type": "paragraph",
+            "content": ". Classification algorithms are used for tasks where the y variable is discrete",
+            "className": "inline"
+        },
+        {
+            "type": "referencePopover",
+            "content": " 3",
+            "reference": {
+                "path": "https://www.biostat.wisc.edu/~craven/cs760/lectures/ml-overview.pdf",
+                "text": "Machine-Learning Tasks and Feature Space Representations, Mark Craven and David Page (2018)"
+            },
+            "className": "inline"
+        },
+        {
+            "type": "paragraph",
+            "content": ". When y has two classes, a binary classification approach is taken, whereas, in the instance where the y has more than two classes, a multi-class classification approach must be taken. There are two main approaches for multi-class problems: one vs all and one vs one. When there are n classes of y, the one vs all approach only uses n binary classification models, in contrast, the one vs one approach uses:",
+            "className": "inline"
+        },  
+        {
+            "type": "image",
+            "content":"classifierExplanationImages/CE0.png",
+            "className":"inline"
+        },
+        {
+            "type": "paragraph",
+            "content":"classification models. The focus of this article is to explain my understanding of classification techniques for binary class problems, from what I have learnt during the Udemy machine learning course by ",
+            "className": "inline"
+        },
+        {
+            "type": "link",
+            "path": "https://www.udemy.com/course/machinelearning/",
+            "content": "Kirill Eremenko and Hadelin de Ponteves."
+        },
+
+
+
+        {
+            "type": "paragraph",
+            "content": ""
+        },
+        {
+            "type": "paragraph",
+            "content": "Binary classification algorithms aim to predict whether y is 0 or 1, based on probability, by finding the optimal decision boundary within the feature space and using a mapping function", 
+            "className": "inline"
+        },
+        {
+            "type": "referencePopover",
+            "content": " 7",
+            "reference": {
+                "path": "https://towardsdatascience.com/machine-learning-classifiers-a5cc4e1b0623",
+                "text": "Machine Learning Classifiers, Sidath Asiri (2018)"
+            },
+            "className": "inline"
+        },
+        {
+            "type": "paragraph",
+            "content": ". The feature space is an n dimensional space of input features, where n is determined by the number of independent variables, which are commonly referred to as features in machine learning literature. Classification algorithms can be split by the type of learner they are, a lazy learner or an eager learner",
+            "className": "inline"
+        },
+        {
+            "type": "referencePopover",
+            "content": " 7",
+            "reference": {
+                "path": "https://towardsdatascience.com/machine-learning-classifiers-a5cc4e1b0623",
+                "text": "Machine Learning Classifiers, Sidath Asiri (2018)"
+            },
+            "className": "inline"
+        },
+        {
+            "type": "paragraph",
+            "content": ". Lazy learners wait until test data is presented, then use the most relevant training data to train on, whereas eager learners make a model using all training data before test data is provided, and so the instance space is taken up with one hypothesis. In contrast to eager learners, a lazy learner takes less time to train but more time when making predictions. K-nearest neighbour and case-based reasoning are examples of lazy learners, and decision trees, naïve bayes and artificial neural networks are examples of eager learners.",
+            "className": "inline"
+        },
+        {
+            "type": "paragraph",
+            "content": " A classification problem is linear if the classes can be separated linearly, if not, then the problem is non-linear",
+            "className": "inline"
+        },
+        {
+            "type": "referencePopover",
+            "content": " 7",
+            "reference": {
+                "path": "https://towardsdatascience.com/machine-learning-classifiers-a5cc4e1b0623",
+                "text": "Machine Learning Classifiers, Sidath Asiri (2018)"
+            },
+            "className": "inline"
+        },
+        {
+            "type": "paragraph",
+            "content": ". Some classifiers perform better with linear data and others with non-linear. Examples of linear classifiers are logistic regression",
+            "className": "inline"
+        },
+        {
+            "type": "referencePopover",
+            "content": " 17",
+            "reference": {
+                "path": "https://dzone.com/articles/introduction-to-classification-algorithms",
+                "text": "Introduction to Classification Algorithms, Upasana Priyadarshiny (2019)"
+            },
+            "className": "inline"
+        },
+        {
+            "type": "paragraph",
+            "content": ", support vector machine",
+            "className": "inline"
+        },
+        {
+            "type": "referencePopover",
+            "content": " 19",
+            "reference": {
+                "path": "https://towardsdatascience.com/https-medium-com-pupalerushikesh-svm-f4b42800e989",
+                "text": "Support Vector Machines(SVM) — An Overview, Rushikesh Pupale (2018)"
+            },
+            "className": "inline"
+        },
+        {
+            "type": "paragraph",
+            "content": " and naïve bayes",
+            "className": "inline"
+        },
+        {
+            "type": "referencePopover",
+            "content": " 9,",
+            "reference": {
+                "path": "https://nlp.stanford.edu/IR-book/html/htmledition/linear-versus-nonlinear-classifiers-1.html",
+                "text": "Linear versus nonlinear classifiers ~ Introduction to Information Retrieval, Christopher D. Manning, Prabhakar Raghavan and Hinrich Schütze (2008)"
+            },
+            "className": "inline"
+        },
+        {
+            "type": "referencePopover",
+            "content": " 17",
+            "reference": {
+                "path": "https://dzone.com/articles/introduction-to-classification-algorithms",
+                "text": "Introduction to Classification Algorithms, Upasana Priyadarshiny (2019)"
+            },
+            "className": "inline"
+        },
+        {
+            "type": "paragraph",
+            "content": " and examples of non-linear classifiers are k-nearest neighbours",
+            "className": "inline"
+        },
+        {
+            "type": "referencePopover",
+            "content": " 9,",
+            "reference": {
+                "path": "https://nlp.stanford.edu/IR-book/html/htmledition/linear-versus-nonlinear-classifiers-1.html",
+                "text": "Linear versus nonlinear classifiers ~ Introduction to Information Retrieval, Christopher D. Manning, Prabhakar Raghavan and Hinrich Schütze (2008)"
+            },
+            "className": "inline"
+        },
+        {
+            "type": "referencePopover",
+            "content": " 11",
+            "reference": {
+                "path": "https://www.quora.com/How-are-linear-classifiers-different-from-non-linear-classifiers",
+                "text": "How are linear classifiers different from non-linear classifiers?, Shehroz Khan (2017)"
+            },
+            "className": "inline"
+        },
+        {
+            "type": "paragraph",
+            "content": " kernel support vector machine ",
+            "className": "inline"
+        },
+        {
+            "type": "referencePopover",
+            "content": " 20",
+            "reference": {
+                "path": "https://www.kdnuggets.com/2016/06/select-support-vector-machine-kernels.html",
+                "text": "How to Select Support Vector Machine Kernels, Sebastian Raschka (2016)"
+            },
+            "className": "inline"
+        },
+        {
+            "type": "paragraph",
+            "content": " decision tree",
+            "className": "inline"
+        },
+        {
+            "type": "referencePopover",
+            "content": " 11",
+            "reference": {
+                "path": "https://www.quora.com/How-are-linear-classifiers-different-from-non-linear-classifiers",
+                "text": "How are linear classifiers different from non-linear classifiers?, Shehroz Khan (2017)"
+            },
+            "className": "inline"
+        },
+        {
+            "type": "paragraph",
+            "content": " and random forest ",
+            "className": "inline"
+        },
+        {
+            "type": "referencePopover",
+            "content": " 11",
+            "reference": {
+                "path": "https://www.quora.com/How-are-linear-classifiers-different-from-non-linear-classifiers",
+                "text": "How are linear classifiers different from non-linear classifiers?, Shehroz Khan (2017)"
+            },
+            "className": "inline"
+        },
+        {
+            "type": "paragraph",
+            "content": ".",
+            "className": "inline"
+        },
+        {
+            "type": "paragraph",
+            "content": "Examples of linear and non-linear data with a linear and non-linear classifier fitted are demonstrated in figure 1. The left-hand column is the input data (synthetic for concept visualisation), the top row of graphs are linear data, and the bottom two rows are non-linear data. The centre column shows naïve bayes classifier (a linear classifier), and the right-hand column shows K-nearest neighbours’ classifier (non-linear classifier). The accuracy scores (in the bottom corner of each naïve bayes and k-nearest neighbours plot) show that naïve bayes performed better with the linearly separable data (top centre, score 0.95), compared to k-nearest neighbours (top right, score 0.93), and compared to the non-linear data (centre, score 0.90; bottom centre, score 0.70). On the other hand, k-nearest neighbours performed better with the non-linear data (centre right, score 0.97; bottom right, score 0.93)."
+        },
+        {
+            "type": "image",
+            "content": "classifierExplanationImages/CE1.png",
+            "className":"center"
+        },
+        {
+            "type": "paragraph",
+            "content":"Figure 1. Examples of linear and non-linear data fitted with a linear and non-linear classifier. Synthetic data generated from the sklearn dataset library."
+        },
+        {
+            "type": "paragraph",
+            "content":"Classifiers can also be frequency based or geometry based",
+            "className": "inline"
+        },
+        {
+            "type": "referencePopover",
+            "content": " 26",
+            "reference": {
+                "path": "https://www.sciencedirect.com/science/article/pii/S0377042714003318",
+                "text": "A classification algorithm based on geometric and statistical information, Anca Ralescu, Irene Díaz, Luis J. Rodríguez-Muñiz (2014)"
+            },
+            "className": "inline"
+        },
+        {
+            "type": "paragraph",
+            "content": ". Examples of frequency-based classifiers are Bayes algorithms. Examples of geometry-based classifiers are K-nearest neighbour algorithms.",
+            "className": "inline"
+        },
+        {
+            "type": "subheading2",
+            "content": "Linear Classifiers"
+        },
         {"type": "subheading","content": "Logistic Regression"},
         {"type": "paragraph","content":"To calculate the logistic regression curve, take the linear regression formula and apply a sigmoid function to y (from linear regression formula):"},
         {"type":"image","content":"classifierExplanationImages/CE2.png", "className":"center"},
@@ -39,7 +303,25 @@
         {"type":"paragraph","content":"Where p^ is probability, and y^ is the prediction of y (the dependent variable), however the 50% boundary of p^ is arbitrary, and can be set to the user’s preference, based on knowledge of the task. 0 and 1 represent the two classes of the dependent variable, so 0 could equal “apple” and 1 could equal “pear” if the task is to predict whether a fruit is an apple or pear."},
         {"type": "subheading","content": "Naïve Bayes"},
         {"type": "paragraph", "content": "This classifier is named naïve bayes as it is constructed around the bayes theorem, and since it requires an assumption of independence, yet there is not always complete independence between the independent variables in real-world data, it is naïve to assume."},
-        {"type": "paragraph", "content": "The following is a made-up classification problem (using artificial data) to explain bayes theorem, inspired by research published by Jones et al. (2020). Jones et al. (2020) found evidence supporting niche partitioning amongst females from a colony on Bird Island (South Georgia), highlighted by difference in carbon isotope signature of the fur seals whiskers, which was used as a proxy for foraging habitat. Jones et al. (2020) reported that, of the 20 females sampled, 70% were found to have carbon isotope signatures, indicating most of the foraging activity being south of the polar front, whereas 30% of the females spent most of their foraging activity north of the polar front. The group mostly foraging south of the polar front were found have lower nitrogen isotope values (indicating feeding at a lower trophic level), and were smaller in body size, than those mostly foraging north of the polar front (Jones et al., 2020)."},
+        {
+            "type": "paragraph",
+            "content": "The following is a made-up classification problem (using artificial data) to explain bayes theorem, inspired by research published by Jones et al. (2020)",
+            "className": "inline"
+        },
+        {
+            "type": "referencePopover",
+            "content": " 27",
+            "reference": {
+                "path": "https://www.nature.com/articles/s41598-020-59992-3#:~:text=Antarctic%20fur%20seals%2C%20Arctocephalus%20gazella%2C%20are%20an%20ideal%20species%20to,a%20highly%20polgygynous%20mating%20system).",
+                "text": "Intra-specific Niche Partitioning in Antarctic Fur Seals, Arctocephalus gazella, Jones et al. (2020)"
+            },
+            "className": "inline"
+        },
+        {
+            "type": "paragraph",
+            "content": ". Jones et al. (2020) found evidence supporting niche partitioning amongst females from a colony on Bird Island (South Georgia), highlighted by difference in carbon isotope signature of the fur seals whiskers, which was used as a proxy for foraging habitat. Jones et al. (2020) reported that, of the 20 females sampled, 70% were found to have carbon isotope signatures, indicating most of the foraging activity being south of the polar front, whereas 30% of the females spent most of their foraging activity north of the polar front. The group mostly foraging south of the polar front were found have lower nitrogen isotope values (indicating feeding at a lower trophic level), and were smaller in body size, than those mostly foraging north of the polar front (Jones et al., 2020).",
+            "className": "inline"
+        },
         {"type": "paragraph", "content": "In this artificial case-study, to make it more interesting, I loosely based the generation of the dataset on the findings of Jones et al. (2020). The two independent variables are the average nitrogen isotope values of the fur seals vibrissae (whiskers), and estimated age (approximated by whisker growth rate), and the dependent variable is the area where a female fur seal spends more time foraging; either north or south of the polar front."},
         {"type": "paragraph","content": "In this example, the question is: what is the probability of a new data point of a seal foraging north of the polar front, where only nitrogen isotope value and age is known?"},
         {"type": "paragraph","content": "The naïve bayes classifier uses the following equation:"},
