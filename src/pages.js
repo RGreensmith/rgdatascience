@@ -11,16 +11,16 @@ export default [
         "description": CNN
     },
     {
-        "title": "Classification Application",
-        "image": "thumbnailImages/KNearestNeighboursTest.png",
-        "path": "/ClassificationApplication",
-        "description": ClassificationApplication
-    },
-    {
         "title": "Classification Algorithms Intro",
         "image": "thumbnailImages/classAlgorithmBackground.png",
         "path": "/ClassificationAlgorithmsIntro",
         "description": classificationExplanations
+    },
+    {
+        "title": "Classification Application",
+        "image": "thumbnailImages/KNearestNeighboursTest.png",
+        "path": "/ClassificationApplication",
+        "description": ClassificationApplication
     },
     {
         "title": "Debian Shell Crash Solution",
