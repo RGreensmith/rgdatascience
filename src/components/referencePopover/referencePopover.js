@@ -20,7 +20,10 @@ const ReferencePopover = ({ children, reference: { path, text }, className }) =>
             }
         >
             <div 
-                onClick={() => setKeepPopOverOpen(!keepPopOverOpen)}
+                onClick={() => {
+                    setKeepPopOverOpen(!keepPopOverOpen)
+                    setPopoverOpen(true)
+                }}
                 onMouseEnter={() => setPopoverOpen(true)}
                 onMouseLeave={() => !keepPopOverOpen && setPopoverOpen(false)}
                 className={`${className} reference-popover`}
