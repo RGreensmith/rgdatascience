@@ -1,6 +1,17 @@
+@import '../../styles/variables.scss';
 
 .home {
   padding-bottom: 20px;
+
+  .home_featured_articles {
+    text-align: center;
+    padding-top: 15px;
+    width: 80%;
+    margin: 0 auto;
+    font-size: 35px;
+    font-family: "Lilita One";
+    border-bottom: 4px solid $primaryBlue;
+  }
 
   .banner_title {
     span {
