@@ -1,6 +1,11 @@
+$navBarHeight:80px;
+$footerHeight:115px;
+$bannerHeight:35vh;
+
 .pageContainer {
   background-color: white;
-  min-height: calc(100vh - 60px);
+  min-height: calc(100vh - #{$navBarHeight} - #{$footerHeight} - #{$bannerHeight});
+  box-sizing: border-box;
 }
 
 body {
@@ -19,16 +24,19 @@ code {
 }
 
 .footer {
-  height: 100px;
-  padding-top: 15px;
+  height: $footerHeight;
   background-color: rgb(121,198,192);
   justify-content: center;
   display: flex;
+  box-sizing: border-box;
+  align-items: center;
+
   a {
     border-radius: 50%;
-    margin: 20px;
+    margin-right: 20px;
+    height: 60px;
     img {
-      height: 60px;
+      height: 100%;
     }
 
     &:hover {
