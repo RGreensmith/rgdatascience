@@ -3,6 +3,7 @@ import ClassificationApplication from './pageDefinitions/ClassificationApplicati
 import classificationExplanations from './pageDefinitions/classificationExplanations.json';
 import shellCrash from './pageDefinitions/shellCrash.json';
 import installZsh from './pageDefinitions/installZsh.json';
+import gitZshShortcuts from './pageDefinitions/gitZshShortcuts.json';
 export default [
     {
         "title": "Convolutional Neural Network",
@@ -33,5 +34,11 @@ export default [
         "image": "thumbnailImages/zshInstall.png",
         "path": "/HowToInstallZsh",
         "description": installZsh
+    },
+    {
+        "title": "gitZshShortcuts",
+        "image": "thumbnailImages/zshInstall.png",
+        "path": "/gitZshShortcuts",
+        "description": gitZshShortcuts
     }
 ]

@@ -1,0 +1,37 @@
+{
+    "title": {
+        "content": "Handy command line git and Zsh shortcuts",
+        "className": "title--blue"
+    },
+    "content": [
+        {
+            "type": "paragraph",
+            "content": ""
+        },
+        {
+            "type": "list",
+            "items": [
+                "cd                                     Change directory",
+                "mkdir                                  Make directory",
+                "git init                               Make a git repository",
+                "echo something                         Prints 'something'",
+                "something > somethingElse              parse the output of 'something' as the input of 'something else'",
+                "echo hello > README.md                 Prints 'hello' into a README file",
+                "git status                             Tells you what's going on in your git repository",
+                "gaa                                    git add --all (stages all files ready to commit)",
+                "gcam \"your commit note\"              git commit -am \"your commit note\" adds tracked changes and makes a commit with your commit note",
+                "ggp                                    git push",
+                "git stash                              stores a change",
+                "gcan! && ggfl                          git commit -a - -amend - -no-edit && git push - -force which adds all modified files to the previous commit and forces a push to remote branch. !Never execute this on a main branch!! Click refresh on github compare to view changes on the open pull request.",
+                "ggfl                                   adds all modified files to the previous commit and forces a push to remote branch. !Never execute this on a main branch!!",
+                "gf                                     git fetch for pulling changes from git to local",
+                "gco branchname                         git checkout of branch called branchname",
+                "gco -b branchname                      creates new branch called branchname",
+                "git stash pop                          gets most recent thing you’ve stashed",
+                "ggpull                                 git pull",
+                "git reset --hard branchname            reset current branch to branch called branchname",
+                "git reset --hard commitHash            reset current branch to a specific commit (commit hash is the reference code for the commit e.g. 73a11ad or 73a11ad37a78bd0722dc2ee0ece99d73c8c59cd0)"
+            ]
+        }
+    ]
+}
