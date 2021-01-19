@@ -4,34 +4,299 @@
     "content":[
         {
             "type":"paragraph",
-            "content":"During my machine learning course by ",
+            "content":"During my ",
             "className": "inline"
         },
         {
             "type": "link",
             "path": "https://www.udemy.com/course/machinelearning/",
-            "content": "Kirill Eremenko and Hadelin de Ponteves on Udemy",
+            "content": "machine learning course",
             "className": "inline"
         },
         {
             "type":"paragraph",
-            "content":", one of the tasks was to create classification models, to predict whether a person would purchase a product advertised to them (in this case an SUV), or not, based on their age and salary, then evaluate the performance of the classifiers by comparing accuracy scores. As the tutorial code had many repetitions (a new python script for each classifier, with repetitions within the scripts), I thought that refactoring the tutorial code to automate the process, and make it as elegant and efficient as I could, would be a good opportunity to get more experience with python. So I created a classification application that automatically creates a variety of classifier models, and automatically generates and saves various outputs (decision surface plots, accuracy scores, confusion matrix plot, prediction using test data split from the initial imputed dataset and classifier model object) to the current directory. The code can be viewed in my ",
+            "content":", one of the tasks was to create classification models, then evaluate the performance of the classifiers by comparing accuracy scores. As the tutorial code had many repetitions (a new python script for each classifier, with repetitions within the scripts), I thought that refactoring the tutorial code to automate the process, and make it as elegant and efficient as I could, would be a good opportunity to get more experience with python. So I created a classification application that automatically creates a variety of classifier models, and automatically generates and saves various outputs to the current directory: decision surface plots (figures 1 & 2), accuracy scores (table 1), confusion matrix plot (figure 3), prediction using test data split from the initial imputed dataset, classifier model object and time taken to fit and predict with each classifier (table 2). The code can be viewed in my ",
             "className":"inline"
         },
         {
             "type": "link",
             "path": "https://github.com/RGreensmith/Classification",
-            "content": "Classification repository.",
+            "content": "Classification repository",
             "className": "inline"
         },
         {
             "type":"paragraph",
-            "content": " Any number of the following classifiers can be used with the classification application:",
+            "content": ". Any number of the following classifiers can be used with the classification application:",
             "className":"inline"
         },
-        {"type":"list","items":["Logistic Regression (LR)","K Nearest Neighbours (KNN)","Support Vector Machine (SVM)", "Kernel Support Vector Machine (KSVM)", "Naive Bayes (NB)", "Decision Tree (DT)", "Random Forest (RF)"]},
-        {"type":"paragraph","content":"The classification application requires the current directory to contain the dataset (which must be a csv) and is where the outputs will be saved. The application arguments are the filename of the dataset (as a single character, which must include the file extension) and a string of the types of classifier to be generated (as abbreviations listed above), although the default (all classifiers listed above) can be used."},
-        {"type": "paragraph","content": "The classification application calls the ‘dataPreprocessor’ function to split the data into x & y training and test, then standardise the data. The application then calls the classifier function, which takes a string of classifiers to use on the training and test data, and loops through the model type list. Firstly, ‘classifier’ creates an empty variable ‘accuracyScores’ with the length set to the length of ‘modelType’ (string of model types to create). Then, ‘classifier’ loops through a series of logical statements that match the characters in the modelType string with the steps to create the relevant model. ‘classifier’ then imports the relevant module from the sklearn library, creates the classifier model object and creates the variable ‘modelTypeFull’, which is the full name of the type of model."},
-        {"type": "paragraph","content": "‘classifier’ then trains the model on the training data, which was passed into the function as ‘xTrain’ and ‘yTrain’, and saves the model into the directory. Classifier then calls the function ‘visualiseResults’ to generate and save decision surface plots to the directory, for test data then training data, using ‘modelTypeFull’ to parse into the plot titles. Classifier then calls predictResults to make a prediction using the x test set, and saves the prediction along with y test data. Classifier then calls the AccuracyAndConfusion function, which generates and saves a confusion matrix plot to directory, and returns an accuracy score. The accuracy score is added to the accuracyScores variable, with a dictionary key called ‘model’ with the model type defined by parsing modelTypeFull, and ‘accuracyScore’, which is the accuracy score object returned by the AccuracyAndConfusion function."}
+        {
+            "type":"list",
+            "items":
+            [
+                "Logistic Regression (LR)",
+                "K Nearest Neighbours (KNN)",
+                "Support Vector Machine (SVM)",
+                "Kernel Support Vector Machine (KSVM)",
+                "Naive Bayes (NB)",
+                "Decision Tree (DT)",
+                "Random Forest (RF)"
+            ]
+        },
+        {
+            "type":"paragraph",
+            "content":"The classification application requires the current directory to contain the dataset (which must be a csv) and is where the outputs will be saved. The application arguments are the filename of the dataset (as a single character, which must include the file extension) and a string of the types of classifier to be generated (as abbreviations listed above), although the default (all classifiers listed above) can be used."
+        },
+        {
+            "type": "paragraph",
+            "content": "The classification application calls the ",
+            "className": "inline" 
+            
+        },
+        {
+            "type": "link",
+            "path": "https://github.com/RGreensmith/Classification/blob/main/dataPreprocessor.py",
+            "content": "dataPreprocessor",
+            "className": "inline"
+        },
+        {
+            "type": "paragraph",
+            "content": " function to split the data into x & y training and test, then standardise the data.  The application then calls the ",
+            "className": "inline"
+        },
+        {
+            "type": "link",
+            "path": "https://github.com/RGreensmith/Classification/blob/main/classifier.py",
+            "content": "classifier",
+            "className": "inline"
+        },
+        {
+            "type": "paragraph",
+            "content": " function, which takes a string of classifiers to use on the training and test data, and loops through the model type list. Firstly, ‘classifier’ creates an empty variable ‘accuracyScores’ with the length set to the length of ‘modelType’ (string of model types to create). Then, ‘classifier’ loops through a series of logical statements that match the characters in the 'modelType' string with the steps to create the relevant model. ‘classifier’ then imports the relevant module from the ",
+            "className": "inline"
+        },
+        {
+            "type": "link",
+            "path": "https://scikit-learn.org/stable/index.html",
+            "content": "sklearn",
+            "className": "inline"
+        },
+        {
+            "type":"paragraph",
+            "content":" library, creates the classifier model object and creates the variable ‘modelTypeFull’, which is the full name of the type of model.",
+            "className":"inline"
+        },
+        {
+            "type":"paragraph",
+            "content": ""
+        },
+        {
+            "type": "paragraph",
+            "content": " 'Classifier' then trains the model on the training data, which was passed into the function as ‘xTrain’ and ‘yTrain’ (and records the time taken to train the classifier), and saves the model into the directory. Classifier then calls the function ", 
+            "className": "inline"
+        },
+        {
+            "type": "link",
+            "path": "https://github.com/RGreensmith/Classification/blob/main/visualiseResults.py",
+            "content": "visualiseResults",
+            "className": "inline"
+        },
+        {
+            "type": "paragraph",
+            "content": " to generate and save decision surface plots to the directory, with training (figure 1) and test data (figure 2) overlayed, using ‘modelTypeFull’ to parse into the plot titles.",
+            "className": "inline"
+        },
+        {
+            "type": "paragraph",
+            "content": ""
+        },
+        {
+            "type": "paragraph",
+            "content": ""
+        },
+        {
+            "type": "paragraph",
+            "content": "Figure 1. Example of a decision surface plot with training data overlayed, generated by my ",
+            "className": "inline"
+        },
+        {
+            "type": "link",
+            "path": "https://github.com/RGreensmith/Classification/blob/main/visualiseResults.py",
+            "content": "visualiseResults",
+            "className": "inline"
+        },
+        {
+            "type": "paragraph",
+            "content": " function.",
+            "className": "inline"
+        },
+        {
+            "type": "image",
+            "content": "classifierApplicationImages/KNearestNeighboursTrainArticleImage.png",
+            "className": "center"
+        },
+        {
+            "type": "paragraph",
+            "content": ""
+        },
+        {
+            "type": "paragraph",
+            "content": "Figure 2. Example of a decision surface plot with test data overlayed, generated by my ",
+            "className": "inline"
+        },
+        {
+            "type": "link",
+            "path": "https://github.com/RGreensmith/Classification/blob/main/visualiseResults.py",
+            "content": "visualiseResults",
+            "className": "inline"
+        },
+        {
+            "type": "paragraph",
+            "content": " function.",
+            "className": "inline"
+        },
+        {
+            "type": "image",
+            "content": "classifierApplicationImages/KNearestNeighboursTestArticleImage.png",
+            "className": "center"
+        },
+        {
+            "type": "paragraph",
+            "content": "",
+            "className": "inline"
+        },
+        {
+            "type": "paragraph",
+            "content": "Classifier then calls ",
+            "className": "inline"
+        },
+        {
+            "type": "link",
+            "path": "https://github.com/RGreensmith/Classification/blob/main/predictResults.py",
+            "content": "predictResults",
+            "className": "inline"
+        },
+        {
+            "type": "paragraph",
+            "content": " to make a prediction using the x test set, and saves the prediction along with y test data (and records the time taken for the classifier to predict new data). Classifier then calls the ",
+            "className": "inline"
+        },
+        {
+            "type": "link",
+            "path": "https://github.com/RGreensmith/Classification/blob/main/plotConfusionMatrix.py",
+            "content": "AccuracyAndConfusion",
+            "className": "inline"
+        },
+        {
+            "type": "paragraph",
+            "content": " function, which generates and saves a confusion matrix plot to directory (figure 3), and returns an accuracy score.",
+            "className":"inline"
+        },
+        {
+            "type":"paragraph",
+            "content":""
+        },
+        {
+            "type": "paragraph",
+            "content": "Figure 3. Example of a confusion matrix generated by my ",
+            "className": "inline"
+        },
+        {
+            "type": "link",
+            "path": "https://github.com/RGreensmith/Classification/blob/main/plotConfusionMatrix.py",
+            "content": "AccuracyAndConfusion",
+            "className": "inline"
+        },
+        {
+            "type": "paragraph",
+            "content": " function.",
+            "className": "inline"
+        },
+        {
+            "type": "image",
+            "content": "classifierApplicationImages/KNearestNeighboursConfusionMatrixArticleImage.png",
+            "className": "center"
+        },
+        {
+            "type": "paragraph",
+            "content": "The accuracy score is added to the 'accuracyScores' variable, with a dictionary key called ‘model’ with the model type defined by parsing modelTypeFull, and ‘accuracyScore’, which is the accuracy score object returned by the AccuracyAndConfusion function. The accuracy score table is printed in the terminal after each model is completed, and is saved as a csv to the directory (table 1).",
+            "className": "inline"
+        },
+        {
+            "type": "paragraph",
+            "content": ""
+        },
+        {
+            "type": "paragraph",
+            "content": ""
+        },
+        {
+            "type": "paragraph",
+            "content": "Table 1. Example of an accuracy score table generated by my ",
+            "className": "inline"
+        },
+        {
+            "type": "link",
+            "path": "https://github.com/RGreensmith/Classification/blob/main/plotConfusionMatrix.py",
+            "content": "AccuracyAndConfusion",
+            "className": "inline"
+        },
+        {
+            "type": "paragraph",
+            "content": " and compiled and saved to the directory by my ",
+            "className": "inline"
+        },
+        {
+            "type": "link",
+            "path": "https://github.com/RGreensmith/Classification/blob/main/classifier.py",
+            "content": "classifier",
+            "className": "inline"
+        },
+        {
+            "type": "paragraph",
+            "content": " function. Accuracy scores for each classifier (ordered by accuracy).",
+            "className": "inline"
+        },
+        {
+            "type": "image",
+            "content": "classifierApplicationImages/accuracyScoreTable.png",
+            "className": "center"
+        },
+        {
+            "type": "paragraph",
+            "content": "The times taken for the classifiers to be trained and to predict new data are compiled into a fit and predict table (table 2), using the same method as the accuracy score table (table 1). The fit and predict table (table 2) is printed in the terminal after each model is completed, and is also saved as a csv to the directory."
+        },
+        {
+            "type": "paragraph",
+            "content": ""
+        },
+        {
+            "type": "paragraph",
+            "content": ""
+        },
+        {
+            "type": "paragraph",
+            "content": "Table 2. Example of a fit and predict table compiled and saved by my ",
+            "className": "inline"
+        },
+        {
+            "type": "link",
+            "path": "https://github.com/RGreensmith/Classification/blob/main/classifier.py",
+            "content": "classifier",
+            "className": "inline"
+        },
+        {
+            "type": "paragraph",
+            "content": " function. Time taken (seconds) for each classifier to train and predict new data (ordered by chronology of the classifier object's creation).",
+            "className": "inline"
+        },
+        {
+            "type": "image",
+            "content": "classifierApplicationImages/classifierFitAndPredictTimeTable.png",
+            "className": "center"
+        },
+        {
+            "type": "paragraph",
+            "content": "Article by Rosemary Greensmith (last updated 19/01/2021)."
+        }
     ]
 }

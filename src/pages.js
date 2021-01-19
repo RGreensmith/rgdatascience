@@ -3,7 +3,7 @@ import ClassificationApplication from './pageDefinitions/ClassificationApplicati
 import classificationExplanations from './pageDefinitions/classificationExplanations.json';
 import shellCrash from './pageDefinitions/shellCrash.json';
 import installZsh from './pageDefinitions/installZsh.json';
-export default [
+const pages = [
     {
         "title": "Convolutional Neural Network",
         "image": "thumbnailImages/cnnBackground.png",
@@ -34,4 +34,6 @@ export default [
         "path": "/HowToInstallZsh",
         "description": installZsh
     }
-]
+];
+
+export default pages;
