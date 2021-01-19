@@ -48,7 +48,7 @@
         },
         {
             "type": "paragraph",
-            "content": "The classification application calls the ",
+            "content": "The classification application calls my ",
             "className": "inline" 
             
         },
@@ -60,7 +60,7 @@
         },
         {
             "type": "paragraph",
-            "content": " function to split the data into x & y training and test, then standardise the data.  The application then calls the ",
+            "content": " function to split the data into x & y training and test, then standardise the data.  The application then calls my ",
             "className": "inline"
         },
         {
@@ -177,7 +177,7 @@
         },
         {
             "type": "paragraph",
-            "content": " to make a prediction using the x test set, and saves the prediction along with y test data (and records the time taken for the classifier to predict new data). Classifier then calls the ",
+            "content": " to make a prediction using the x test set, and saves the prediction along with y test data (and records the time taken for the classifier to predict new data). Classifier then calls my ",
             "className": "inline"
         },
         {
@@ -218,7 +218,7 @@
         },
         {
             "type": "paragraph",
-            "content": "The accuracy score is added to the 'accuracyScores' variable, with a dictionary key called ‘model’ with the model type defined by parsing modelTypeFull, and ‘accuracyScore’, which is the accuracy score object returned by the AccuracyAndConfusion function. The accuracy score table is printed in the terminal after each model is completed, and is saved as a csv to the directory (table 1).",
+            "content": "The accuracy score is added to the 'accuracyScores' variable, with a dictionary key called ‘model’ with the model type defined by parsing 'modelTypeFull', and ‘accuracyScore’, which is the accuracy score object returned by my 'AccuracyAndConfusion' function. The accuracy score table is printed in the terminal after each model is completed, and is saved as a csv to the directory (table 1).",
             "className": "inline"
         },
         {
