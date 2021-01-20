@@ -7,7 +7,7 @@ const Page = ({description: { title, content }}) => {
     useEffect(() => {
         window.scrollTo(0,0)
     }, [title, content]);
-
+    let isFirstVid = true;
     return (<div className="page">
         <Banner>
             {title.content}
@@ -39,6 +39,11 @@ const Page = ({description: { title, content }}) => {
                                 {content}
                             </ReferencePopover>
                         );
+                    } else if (type === 'video') {
+                        const autoPlay=isFirstVid;
+                        isFirstVid=false; 
+                        return <video width="100%" height="auto" controls autoPlay={autoPlay}>
+                            <source src={content} type="video/mp4"/></video>
                     }
                     return '';
                 })}
