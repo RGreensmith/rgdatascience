@@ -5,98 +5,66 @@
     },
     "content": [
         {
-            "type": "subheading",
-            "content": "Website Structure"
-        },
-        {
             "type": "paragraph",
-            "content": "I decided to build this website application using javascript. The website is client rendered using React, and I run this website in a UNIX terminal. I structured the website to use a json description for each of the pages. I set up a Linux subsystem for my programming (as it is a more versatile and widely used operating system for machine learning applications) and use the command line for git and installing software’s and libraries."
+            "content": "This website is a collection of articles I have written, about topics I am interested in, mainly marine science, statistics, applications of machine learning and programming."
         },
         {
             "type": "subheading",
-            "content": "Website Content"
-        },
-        {
-            "type":"paragraph",
-            "content":"This website contains articles covering a variety of topics, such as:"
-        },
-        {
-            "type": "list",
-            "items": [
-                        "My understanding of how various machine learning techniques work",
-                        "How I coded up the applications of machine learning techniques",
-                        "Solutions to general computing issues",
-                        "General programming",
-                        "Marine science blog posts"
-                    ]
-        },        
-        {
-            "type":"subheading",
-            "content": "About Me"
+            "content": "Gallery"
         },
         {
             "type": "paragraph",
-            "content": "I have a first-class BSc (Hons) in marine biology and an MScRes in ocean sciences currently under assessment, both from Bangor University."
+            "content": "The following are pictures of wildlife I have taken and drawn, and includes pictures of me windsurfing and surfing on Tiree (taken by Richard Whitson)."
         },
         {
-            "type": "paragraph",
-            "content": "I am currently doing a machine learning course (using Python) by ",
-            "className": "inline"
+            "type": "image",
+            "content": "AboutImages/bigColony.jpg",
+            "className": "center"
         },
         {
-            "type": "link",
-            "path": "https://www.udemy.com/course/machinelearning/",
-            "content": "Kirill Eremenko and Hadelin de Ponteves on Udemy"
+            "type": "image",
+            "content": "AboutImages/chough.jpg",
+            "className": "center"
         },
         {
-            "type": "paragraph",
-            "content": ". So far I have covered:",
-            "className": "inline"
+            "type": "image",
+            "content": "AboutImages/gannetDrawing.jpg",
+            "className": "center"
         },
         {
-            "type":"list",
-            "items":[
-                "Deep learning (artificial neural network and convolutional neural network for computer vision) using Tensorflow",
-                "Association rule learning (apriori and eclat)",
-                "Reinforcement learning (upper confidence bound and Thompson sampling)",
-                "Regression (simple and multiple linear, polynomial, support vector, decision tree and random forest)",
-                "Classification (logistic regression, k nearest neighbours, support vector machine, kernel support vector machine, naïve bayes, decision tree and random forest)"
-            ]
+            "type": "image",
+            "content": "AboutImages/RazorbillsOnLedge.jpg",
+            "className": "center"
         },
         {
-            "type": "paragraph",
-            "content": "Whilst undertaking my machine learning course, I used my new skills to create a convolutional neural network trained to identify my photos (see ‘Convolutional Neural Networks’) and a classification application (see ‘Classification Application’). I decided to do these projects to solidify my understanding of what I learnt on the course, and gain more experience using python, as I only started using it when I began this course."
+            "type": "image",
+            "content": "AboutImages/sealsHauledOut.jpg",
+            "className": "center"
         },
         {
-            "type": "paragraph",
-            "content": "During my MScRes, I wrote a fully documented, downloadable R package for my data analysis, which can be viewed in my ",
-            "className": "inline"
-            
+            "type": "image",
+            "content": "AboutImages/turnstone.jpg",
+            "className": "center"
         },
         {
-            "type": "link",
-            "path": "https://github.com/RGreensmith/MScResPACK",
-            "content": "MScResPACK repository"
+            "type": "image",
+            "content": "AboutImages/flyingGuillemot.jpg",
+            "className": "center"
         },
         {
-            "type": "paragraph",
-            "content": ". The statistical methods I used include:",
-            "className": "inline"
+            "type": "image",
+            "content": "AboutImages/tireeWindsurfing.jpg",
+            "className": "center"
         },
         {
-            "type":"list",
-            "items":[
-                "K means clustering",
-                "Hierarchical agglomerative clustering",
-                "Principle component analysis",
-                "Random walk metropolis sampling",
-                "Zero-inflated generalised linear models",
-                "K fold cross validation"
-            ]
+            "type": "image",
+            "content": "AboutImages/baskingShark.jpg",
+            "className": "center"
         },
         {
-            "type": "paragraph",
-            "content": "I code in python and R, and through creating this website have gained experience with javascript, html and CSS. Throughout my BSc Marine Biology and MScRes Ocean Sciences, I have gained experience using GIS software such as ArcGIS and statistical software such as Excel, SPSS and Primer, MATLAB, and data portals such as EMODnet and Digimap."
+            "type": "image",
+            "content": "AboutImages/Balevullin.jpg",
+            "className": "center"
         }
     ]
 }
